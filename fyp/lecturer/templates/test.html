@@ -1,7 +1,21 @@
-<form method="post">
-    {% csrf_token %}
-    <textarea name="inputText"></textarea>
-    <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Generated Summary</h1>
 
-<p>{{ processed_text }}</p>
+    <!-- 添加一个表单和一个文本框 -->
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="user_input"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- 使用Django模板语言来显示摘要 -->
+    {% if summary %}
+    <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
