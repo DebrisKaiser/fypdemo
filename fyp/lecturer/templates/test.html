@@ -1,0 +1,7 @@
+<form method="post">
+    {% csrf_token %}
+    <textarea name="inputText"></textarea>
+    <input type="submit" value="Submit">
+</form>
+
+<p>{{ processed_text }}</p>
